@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Student - Media Profile</title>
+</head>
+<body>
+    <!-- Internal Navigation -->
+    <nav>
+        <a href="../table.html">Our Courses</a> 
+        <a href="./media.html">About Student</a>
+    </nav>
+    
+    <header>
+        <h1>Biography</h1>
+    </header>
+    
+    <main>
+<section>
+    <!-- Picture element with responsive sources -->
+    <picture>
+        <!-- For large screens (laptop) - 1200px and up -->
+        <source media="(min-width: 1200px)" 
+                srcset="../Assets/Images/image1.jpg" 
+                type="image/jpeg">
+        
+        <!-- For medium screens (tablet) - 768px to 1199px -->
+        <source media="(min-width: 768px) and (max-width: 1199px)" 
+                srcset="../Assets/Images/image1.jpg" 
+                type="image/jpeg">
+        
+        <!-- For small screens (mobile) - up to 767px -->
+        <source media="(max-width: 767px)" 
+                srcset="../Assets/Images/image1.jpg" 
+                type="image/jpeg">
+        
+        <!-- Additional source for high-DPI displays -->
+        <source media="(min-resolution: 2dppx)" 
+                srcset="../Assets/Images/image1.jpg" 
+                type="image/jpeg">
+        
+        <!-- Fallback image -->
+        <img src="../Assets/Images/image1.jpg" 
+             alt="Olaitan Adebayo Odufuwa - Cloud Solution Architect" 
+             width="450" height="250">
+    </picture>
+</section>
+<section>                 
+    <!-- Audio element -->
+    <h2>Audio Introduction</h3>
+    <audio controls preload="metadata">
+    <source src="https://www.soundjay.com/misc/sounds/click-03.wav" type="audio/wav">
+    <source src="https://www.soundjay.com/misc/sounds/click-03.mp3" type="audio/mpeg">
+     Your browser does not support the audio element. Please use a modern browser to hear my introduction.
+    </audio>
+           <p>
+                Hello! Iam Olaitan Adebayo Odufuwa, an accomplished Cloud Solution Architect from Lagos, Nigeria. 
+                I hold a Bachelor's degree in Computer Science from Tai Solarin University of Education, Ogun State, 
+                where I graduated in 2009. Over the years, I have developed extensive expertise in cloud technologies 
+                and IT infrastructure management.
+            </p>
+        </section>    
+<section>
+    <h2>Professional Journey Video</h2>
+                        <video controls width="450" height="250" poster="https://via.placeholder.com/350x250/50E3C2/ffffff?text=Video+Poster">
+                            <source src="../Assets/Video/vidinterview.mp4" type="video/mp4">
+                            <source src="../Assets/Video/vidinterview.mp4" type="video/webm">
+                            <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English">
+                            Your browser does not support the video tag. Please use a modern browser to view my professional journey video.
+                        </video>
+                        <p>
+                            With over 7 years of professional experience in Azure Cloud Engineering, M365, and IT infrastructure 
+                            management, I have worked in various roles including Technical Support Specialist for M365 Copilot at 
+                            Microsoft, Information Technology Specialist, Linux System Administrator, and Cloud Specialist focusing 
+                            on Azure Identity. My experience spans across technical support, system administration, and cloud solutions.
+                        </p>
+        </section>              
+        <section>
+            <h2>Achievements & Certifications</h2>
+            
+            <!-- Figure with caption -->
+            <figure>
+                <img src="../Assets/Images/1_hVyFeJFDWN5suvcDUsGevw.png" 
+                     alt="Azure Certification Collection" 
+                     width="300" 
+                     height="200">
+                <figcaption>
+                    My collection of Azure certifications demonstrating expertise in cloud technologies
+                </figcaption>
+            </figure>
+            
+            <p>
+                I am highly certified in Azure technologies, with demonstrated success in optimizing technical 
+                operations, achieving substantial cost reductions, and enhancing system performance. I'm passionate about 
+                delivering innovative cloud solutions and driving organizational success through technology.
+            </p>
+        </section>
+                    <figure>
+                <img src="../Assets/Images/aws.webp" 
+                     alt="Azure Certification Collection" 
+                     width="300" 
+                     height="200">
+                <figcaption>
+                    My collection of AWS certifications demonstrating expertise in cloud technologies
+                </figcaption>
+            </figure>
+            
+            <p>
+                I am highly certified in AWS technologies, with demonstrated success in optimizing technical 
+                operations, achieving substantial cost reductions, and enhancing system performance. I'm passionate about 
+                delivering innovative cloud solutions and driving organizational success through technology.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Contact Information</h2>
+            
+            <!-- Canvas for dynamic content -->
+            <canvas id="contactCanvas" width="400" height="200" style="border: 1px solid black;">
+                Your browser does not support the canvas element.
+            </canvas>
+            
+            <script>
+                // Simple canvas drawing for contact info
+                const canvas = document.getElementById('contactCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Background
+                ctx.fillStyle = '#E8F4FD';
+                ctx.fillRect(0, 0, 400, 200);
+                
+                // Text
+                ctx.fillStyle = '#2C3E50';
+                ctx.font = '20px Arial';
+                ctx.fillText('Contact Me:', 20, 40);
+                ctx.font = '16px Arial';
+                ctx.fillText('Email: olaitanodufuwa@gmail.com', 20, 70);
+                ctx.fillText('Location: Lagos, Nigeria', 20, 100);
+                ctx.fillText('Specialization: Cloud Engineer', 20, 130);
+                
+                // Simple graphic
+                ctx.beginPath();
+                ctx.arc(350, 100, 30, 0, 2 * Math.PI);
+                ctx.fillStyle = '#3498DB';
+                ctx.fill();
+                ctx.fillStyle = 'white';
+                ctx.font = '14px Arial';
+                ctx.fillText('☁', 345, 105);
+            </script>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <p>&copy; 2025 Olaitan Adebayo Odufuwa - ALT SCHOOL Student Profile</p>
+        <p>Last Updated: July 28th, 2025</p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+</body>
+</html>
