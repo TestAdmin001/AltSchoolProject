@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Assignment</title>
+    <style>
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling and centering */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main CSS Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: 2fr 1fr; /* Top row twice as tall as bottom */
+    gap: 10px; /* Space between grid items */
+    width: 900px;
+    height: 650px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main section spanning both columns */
+.main-section {
+    grid-column: 1 / -1; /* Span from first to last column */
+    background: linear-gradient(135deg, #00587b, #1d9fe5);
+    border: 3px solid hsl(187, 100%, 88%);
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    gap: 20px;
+}
+
+/* Profile picture circle */
+.profile-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #aeeffe;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-circle .placeholder {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Main text section styling */
+.main-text {
+    flex: 1;
+    color: #ffffff;
+    overflow-y: auto;
+}
+
+/* Main section heading */
+.main-text h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Professional summary */
+.summary {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Proven track record section */
+.track-record {
+    margin-bottom: 15px;
+}
+
+.track-record h3 {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.track-record ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.track-record li {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    color: #ffffff;
+    padding-left: 10px;
+    position: relative;
+}
+
+.track-record li:before {
+    content: "•";
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+/* Shared styling for hobbies and aspiration sections */
+.hobbies-section, .aspiration-section {
+    background: linear-gradient(135deg, #bdffe4, #b9ffd8);
+    border: 3px solid #dcfff7;
+    border-radius: 15px;
+    display: grid;
+    flex-direction: column;
+    padding: 15px;
+    overflow: hidden;
+}
+
+/* Text content styling for both bottom sections */
+.hobbies-text, .aspiration-text {
+    color: #333;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Headings for hobbies and aspirations */
+.hobbies-text h3, .aspiration-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #111111;
+    font-weight: bold;
+}
+
+/* Hobbies paragraph styling */
+.hobbies-text p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Aspiration paragraph styling */
+.aspiration-text p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Hover effects for interactivity */
+.grid-container > div {
+    transition: transform 0.3s ease;
+}
+
+.grid-container > div:hover {
+    transform: translateY(-2px);
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="main-section">
+            <div class="profile-circle">
+                <img src="./Assets/mypics.jpg" alt="Profile Picture" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="placeholder" style="display: none;">Add your photo here</div>
+            </div>
+            <div class="main-text">
+                <h2>Talk about yourself</h2>
+                <div class="summary">
+                    My name is Olaitan Odufuwa, an Azure Cloud Engineer with 7+ years of experience designing and implementing enterprise cloud infrastructure solutions. Currently Technical Support Specialist 
+                    for Microsoft 365 Copilot at Microsoft Corporation, where I educate 500+ users and maintain 95% resolution rates. Enhanced team productivity by 25% through systematic knowledge management at FPG Technologies. 
+                    Provided comprehensive technical support reducing system downtime by 20%. Managed cross-functional teams and served as primary communication liaison improving internal collaboration by 40%.
+                </div>
+                
+                <div class="track-record">
+                    <h3>TECHNICAL EXPERTISE:</h3>
+                    <ul>
+                        <li>Microsoft Azure cloud engineering with AZ-305 certification in Infrastructure Solutions.</li>
+                        <li>DevOps engineering using Kubernetes, Terraform, Ansible, and Prometheus</li>
+                        <li>Linux system administration across Red Hat, CentOS, Ubuntu, and Debian distributions.</li>
+                        <li>Microsoft Azure cloud engineering with AZ-305 certification in Infrastructure Solutions.</li>
+                        <li>IT infrastructure management with budget responsibility exceeding $20,000</li>
+                        <li>Network security implementation including IPtables and firewall management.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hobbies-section">
+            <div class="hobbies-text">
+                <h3>Hobbies</h3>
+                <li>Swimming </li>
+                <li>Watching movies </li>
+            </div>
+        </div>
+        
+        <div class="aspiration-section">
+            <div class="aspiration-text">
+                <h3>Aspiration in life</h3>
+                <p>My aspiration in life is to become a leading cloud architect who designs innovative solutions that help businesses 
+                    transform digitally. I dream of working with global teams to build scalable, secure infrastructures that make technology 
+                    accessible to everyone. I also hope to mentor the next 
+                    generation of cloud engineers and contribute to open-source projects that benefit the tech community.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
