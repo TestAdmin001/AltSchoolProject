@@ -48,7 +48,10 @@
         }
 
         body.dark-theme::before {
-            background: none;
+            background: radial-gradient(circle at 20% 50%, #ff006e 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, #8338ec 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, #3a86ff 0%, transparent 50%),
+                        radial-gradient(circle at 90% 90%, #06ffa5 0%, transparent 50%);
         }
 
         /* Floating particles */
@@ -62,7 +65,7 @@
         }
 
         .dark-theme .particle {
-            display: none;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         @keyframes float {
