@@ -7,3 +7,6 @@ https://testadmin001.github.io/AltSchoolProject/Assignment%202.html
 
 Login Page
 https://testadmin001.github.io/AltSchoolProject/loginpage.html
+
+Beginner Project Assignment: Stopwatch App Exam
+https://testadmin001.github.io/AltSchoolProject/Exam.html
